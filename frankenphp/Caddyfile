@@ -4,11 +4,13 @@
 	frankenphp {
 		{$FRANKENPHP_CONFIG}
 	}
+
+	auto_https off
 }
 
 {$CADDY_EXTRA_CONFIG}
 
-{$SERVER_NAME:localhost} {
+:80 {
 	log {
 		# Redact the authorization query parameter that can be set by Mercure
 		format filter {
